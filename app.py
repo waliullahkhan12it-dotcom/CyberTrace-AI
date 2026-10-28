@@ -994,7 +994,7 @@ elif page == "About CyberTrace AI":
     """)
     st.caption("Threat Hunter theme • Dark slate, teal, orange, and red severity colors")
 
-```
+
 # ====================== SIDEBAR AND DATA ======================
 st.sidebar.markdown("# 🛡️ CyberTrace AI")
 st.sidebar.caption("THREAT HUNTER • EVIDENCE-BASED INVESTIGATION")
