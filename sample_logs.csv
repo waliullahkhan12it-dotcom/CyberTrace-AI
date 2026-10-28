@@ -1,0 +1,13 @@
+timestamp,username,source_ip,event_type,description,hostname,severity
+2026-10-27 09:00:00,ali,192.168.1.10,login_success,Normal login,PC-01,Low
+2026-10-27 09:02:00,ahmad,192.168.1.11,login_failure,Incorrect password,PC-02,Medium
+2026-10-27 09:02:20,ahmad,192.168.1.11,login_failure,Incorrect password,PC-02,Medium
+2026-10-27 09:02:40,ahmad,192.168.1.11,login_failure,Incorrect password,PC-02,Medium
+2026-10-27 09:03:00,ahmad,192.168.1.11,login_failure,Incorrect password,PC-02,Medium
+2026-10-27 09:04:00,ahmad,192.168.1.11,login_success,Login after repeated failures,PC-02,High
+2026-10-27 09:10:00,sara,203.0.113.45,privilege_change,Administrator privilege granted,SERVER-01,High
+2026-10-27 09:15:00,ali,192.168.1.10,file_access,Accessed confidential file,PC-01,Medium
+2026-10-27 09:20:00,unknown,198.51.100.77,login_failure,Unknown account login attempt,SERVER-02,High
+2026-10-27 09:25:00,admin,203.0.113.45,login_success,Administrator login,SERVER-01,Medium
+2026-10-27 09:30:00,admin,203.0.113.45,file_access,Accessed restricted folder,SERVER-01,High
+2026-10-27 09:35:00,ali,192.168.1.10,logout,User logged out,PC-01,Low
