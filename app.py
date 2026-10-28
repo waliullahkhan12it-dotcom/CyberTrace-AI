@@ -11,33 +11,123 @@ st.set_page_config(
 )
 
 # -------------------- DESIGN --------------------
+
+   
 st.markdown("""
 <style>
+/* Main background */
 .stApp {
-    background: linear-gradient(135deg, #0b1020, #171333, #10283a);
-    color: #f1f5f9;
+    background: linear-gradient(135deg, #080d1b, #171333, #10283a);
+    color: #f8fafc;
 }
+
+/* Sidebar */
 [data-testid="stSidebar"] {
-    background: #111827;
+    background: linear-gradient(180deg, #111827, #1e1b4b);
 }
-h1, h2, h3 {
+
+/* Main page title */
+h1 {
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
     color: #67e8f9 !important;
+    letter-spacing: 0.5px;
 }
-.metric-card {
-    background: linear-gradient(135deg, #172554, #312e81);
-    padding: 18px;
-    border-radius: 14px;
-    border: 1px solid #3b82f6;
+
+/* Section headings */
+h2 {
+    font-size: 2rem !important;
+    font-weight: 750 !important;
+    color: #93c5fd !important;
 }
+
+h3 {
+    font-size: 1.45rem !important;
+    font-weight: 700 !important;
+    color: #c4b5fd !important;
+}
+
+/* Normal text */
+.stApp p,
+.stApp label,
+.stApp li {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: #e2e8f0;
+}
+
+/* Metric cards */
 div[data-testid="stMetric"] {
-    background: #172554;
-    padding: 15px;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #172554, #312e81);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #38bdf8;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+div[data-testid="stMetricLabel"] {
+    font-size: 1rem !important;
+    color: #bae6fd !important;
+}
+
+div[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+}
+
+/* Buttons */
+.stButton button,
+.stDownloadButton button {
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 10px;
+    min-height: 44px;
+    border: 1px solid #38bdf8;
+    transition: 0.2s ease;
+}
+
+.stButton button:hover,
+.stDownloadButton button:hover {
+    border-color: #c4b5fd;
+    color: #67e8f9;
+}
+
+/* Data tables */
+div[data-testid="stDataFrame"] {
     border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+/* Input fields */
+.stTextInput input,
+.stSelectbox div,
+.stMultiSelect div {
+    font-size: 1rem;
+}
+
+/* Sidebar text */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label {
+    font-size: 1rem;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.1rem !important;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    div[data-testid="stMetricValue"] {
+        font-size: 1.5rem !important;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
-
 # -------------------- SAMPLE DATA --------------------
 SAMPLE_CSV = """timestamp,username,source_ip,event_type,description,hostname,severity
 2026-10-27 09:00:00,ali,192.168.1.10,login_success,Normal login,PC-01,Low
