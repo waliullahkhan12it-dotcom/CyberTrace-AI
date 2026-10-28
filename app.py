@@ -993,7 +993,6 @@ elif page == "About CyberTrace AI":
     proof of malicious activity.
     """)
     st.caption("Threat Hunter theme • Dark slate, teal, orange, and red severity colors")
-```### Part 2 of 3
 
 ```python
 # ====================== SIDEBAR AND DATA ======================
