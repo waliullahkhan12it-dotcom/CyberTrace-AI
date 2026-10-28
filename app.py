@@ -11,195 +11,204 @@ st.set_page_config(
 )
 
 # -------------------- DESIGN --------------------
+# ============================================================
+# CYBERTRACE AI — THREAT HUNTER PROFESSIONAL THEME
+# ============================================================
 
-   
-
-
-# CYBERTRACE AI — PROFESSIONAL DASHBOARD THEME
 st.markdown("""
 <style>
-/* Main application background */
+
+/* ===== MAIN BACKGROUND ===== */
 .stApp {
     background:
-        radial-gradient(ellipse at top left, #172554 0%, transparent 45%),
-        linear-gradient(135deg, #070b18 0%, #10172a 55%, #11112b 100%);
+        radial-gradient(ellipse at top left,
+            rgba(13, 148, 136, 0.13), transparent 38%),
+        linear-gradient(135deg, #0b1220, #111c2d 55%, #101923);
     color: #f1f5f9;
 }
 
-/* Main content spacing */
 .block-container {
+    max-width: 1500px;
     padding-top: 2rem;
     padding-bottom: 3rem;
-    max-width: 1500px;
 }
 
-/* Main headings */
+/* ===== HEADINGS ===== */
 h1 {
-    color: #67e8f9 !important;
+    color: #5eead4 !important;
     font-size: 2.8rem !important;
     font-weight: 850 !important;
-    letter-spacing: -1px;
+    letter-spacing: -0.8px;
 }
 
 h2 {
-    color: #a5b4fc !important;
+    color: #99f6e4 !important;
     font-size: 2rem !important;
     font-weight: 800 !important;
 }
 
 h3 {
     color: #67e8f9 !important;
-    font-size: 1.45rem !important;
+    font-size: 1.4rem !important;
     font-weight: 750 !important;
 }
 
-/* Body text */
+/* ===== READABLE WRITING ===== */
 .stApp p,
 .stApp li,
-.stApp label,
-.stMarkdown {
+.stApp label {
     color: #e2e8f0;
     font-size: 1.08rem;
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
-/* Sidebar */
+.stCaption,
+[data-testid="stCaptionContainer"] {
+    color: #aabbd0 !important;
+}
+
+/* ===== SIDEBAR ===== */
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #10172a, #17163b 60%, #0c2238);
-    border-right: 1px solid #263c66;
+    background: linear-gradient(
+        180deg, #101a29, #132c39 60%, #10221f
+    );
+    border-right: 1px solid #24545a;
 }
 
 [data-testid="stSidebar"] h1 {
-    font-size: 2.1rem !important;
-    color: #67e8f9 !important;
+    font-size: 2rem !important;
+    color: #5eead4 !important;
 }
 
 [data-testid="stSidebar"] p,
 [data-testid="stSidebar"] label {
-    font-size: 1.05rem;
-    color: #e0e7ff;
+    color: #dbeafe;
+    font-size: 1rem;
 }
 
-/* Metric cards */
+/* ===== METRIC CARDS ===== */
 div[data-testid="stMetric"] {
-    background: linear-gradient(135deg, #172554, #25205a);
-    border: 1px solid #3b82f6;
-    border-radius: 18px;
-    padding: 22px 20px;
-    box-shadow: 0 6px 22px rgba(37, 99, 235, 0.16);
-    min-height: 125px;
-    transition: all 0.2s ease-in-out;
+    background: linear-gradient(145deg, #192b3c, #172238);
+    border: 1px solid #287d7b;
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 120px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+    transition: all 0.2s ease;
 }
 
 div[data-testid="stMetric"]:hover {
-    border-color: #67e8f9;
-    box-shadow: 0 8px 28px rgba(34, 211, 238, 0.2);
+    border-color: #5eead4;
+    box-shadow: 0 5px 22px rgba(45, 212, 191, 0.16);
     transform: translateY(-2px);
 }
 
 div[data-testid="stMetricLabel"] {
-    color: #bfdbfe !important;
-    font-size: 1.02rem !important;
+    color: #b8cbd9 !important;
+    font-size: 1rem !important;
     font-weight: 650 !important;
 }
 
 div[data-testid="stMetricValue"] {
-    color: #ffffff !important;
-    font-size: 2.25rem !important;
+    color: #5eead4 !important;
+    font-size: 2.15rem !important;
     font-weight: 850 !important;
 }
 
-/* Containers and cards */
-div[data-testid="stVerticalBlockBorderWrapper"] {
-    background: rgba(17, 27, 51, 0.72);
-    border: 1px solid #293d65;
-    border-radius: 16px;
-}
-
-/* Buttons */
+/* ===== BUTTONS ===== */
 .stButton button,
 .stDownloadButton button {
-    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    background: linear-gradient(100deg, #0f766e, #115e59);
     color: #ffffff !important;
-    font-size: 1.05rem;
-    font-weight: 750;
-    border: 1px solid #60a5fa;
-    border-radius: 12px;
-    min-height: 46px;
-    padding: 8px 18px;
+    border: 1px solid #2dd4bf;
+    border-radius: 10px;
+    min-height: 44px;
+    padding: 8px 16px;
+    font-size: 1.03rem;
+    font-weight: 700;
     transition: all 0.2s ease;
 }
 
 .stButton button:hover,
 .stDownloadButton button:hover {
-    border-color: #67e8f9;
-    box-shadow: 0 0 18px rgba(34, 211, 238, 0.24);
+    background: linear-gradient(100deg, #0d9488, #0f766e);
+    border-color: #99f6e4;
+    box-shadow: 0 0 15px rgba(45, 212, 191, 0.20);
 }
 
-/* Input boxes */
+/* ===== INPUTS ===== */
 .stTextInput input,
 .stNumberInput input,
 .stTextArea textarea {
-    background: #111c33 !important;
+    background: #111e2d !important;
     color: #f8fafc !important;
-    border: 1px solid #3b5280 !important;
-    border-radius: 10px !important;
-    font-size: 1.05rem !important;
+    border: 1px solid #38546a !important;
+    border-radius: 9px !important;
+    font-size: 1rem !important;
 }
 
 div[data-baseweb="select"] > div {
-    background: #111c33;
-    border-color: #3b5280;
-    border-radius: 10px;
+    background: #142337;
+    border-color: #38546a;
+    border-radius: 9px;
+    color: #f8fafc;
 }
 
-/* Tabs */
+/* ===== TABS ===== */
 button[data-baseweb="tab"] {
     color: #cbd5e1;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
 button[data-baseweb="tab"][aria-selected="true"] {
-    color: #67e8f9;
-    border-bottom-color: #22d3ee;
+    color: #5eead4;
+    border-bottom-color: #2dd4bf;
 }
 
-/* Tables */
+/* ===== DATA TABLES ===== */
 div[data-testid="stDataFrame"],
 div[data-testid="stTable"] {
-    border: 1px solid #334b70;
+    border: 1px solid #29475b;
     border-radius: 12px;
     overflow: hidden;
 }
 
-/* Alerts */
+/* ===== ALERTS ===== */
 div[data-testid="stAlert"] {
     border-radius: 12px;
-    border: 1px solid #3b5280;
 }
 
-/* Expanders */
+/* ===== EXPANDERS ===== */
 [data-testid="stExpander"] {
-    background: rgba(20, 32, 58, 0.8);
-    border: 1px solid #334b70;
+    background: rgba(20, 35, 52, 0.85);
+    border: 1px solid #29475b;
     border-radius: 12px;
 }
 
-/* Progress bars */
-.stProgress > div > div > div {
-    background: linear-gradient(90deg, #06b6d4, #8b5cf6);
-}
-
-/* File uploader */
+/* ===== FILE UPLOAD ===== */
 [data-testid="stFileUploader"] {
-    background: rgba(23, 37, 84, 0.45);
-    border: 1px dashed #60a5fa;
+    background: rgba(20, 40, 55, 0.65);
+    border: 1px dashed #2dd4bf;
     border-radius: 14px;
     padding: 12px;
 }
 
-/* Mobile display */
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b1220;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #286b70;
+    border-radius: 8px;
+}
+
+/* ===== MOBILE SUPPORT ===== */
 @media (max-width: 768px) {
     .block-container {
         padding-top: 1rem;
@@ -214,11 +223,11 @@ div[data-testid="stAlert"] {
     }
 
     h3 {
-        font-size: 1.25rem !important;
+        font-size: 1.2rem !important;
     }
 
     div[data-testid="stMetricValue"] {
-        font-size: 1.65rem !important;
+        font-size: 1.6rem !important;
     }
 
     .stApp p,
@@ -227,6 +236,7 @@ div[data-testid="stAlert"] {
         font-size: 1rem;
     }
 }
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -520,25 +530,44 @@ elif page == "Attack Timeline":
         st.dataframe(valid, use_container_width=True)
 
 # -------------------- EVIDENCE GRAPH --------------------
-elif page == "Evidence Relationship Graph":
-    st.title("🕸️ Evidence Relationship Graph")
-    st.info(
-        "This first version shows shared users and source IPs. "
-        "A shared value is a relationship clue, not proof of an attack."
+
+            # Apply to your existing Plotly figure named fig
+fig.update_layout(
+    template="plotly_dark",
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="#111e2d",
+    font=dict(
+        family="Arial",
+        size=14,
+        color="#e2e8f0"
+    ),
+    title_font=dict(
+        size=21,
+        color="#5eead4"
+    ),
+    margin=dict(l=20, r=20, t=60, b=30),
+    legend=dict(
+        bgcolor="rgba(17,30,45,0.75)",
+        font=dict(size=12, color="#dbeafe")
+    ),
+    hoverlabel=dict(
+        bgcolor="#193447",
+        font_color="#ffffff",
+        font_size=14
     )
-    if df.empty:
-        st.info("No events available.")
-    else:
-        graph_df = df.groupby(["username", "source_ip"]).size().reset_index(name="Events")
-        graph_df = graph_df.head(40)
-        fig = px.scatter(
-            graph_df, x="username", y="source_ip",
-            size="Events", color="Events",
-            hover_data=["Events"], template="plotly_dark",
-            title="Users Associated with Source IPs"
-        )
-        st.plotly_chart(fig, use_container_width=True)
-        st.dataframe(graph_df, use_container_width=True)
+)
+
+fig.update_xaxes(
+    gridcolor="#293b4d",
+    zerolinecolor="#456174"
+)
+
+fig.update_yaxes(
+    gridcolor="#293b4d",
+    zerolinecolor="#456174"
+)
+
+st.plotly_chart(fig, use_container_width=True)
 
 # -------------------- AI INVESTIGATOR --------------------
 elif page == "AI Investigator":
