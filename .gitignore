@@ -1,0 +1,21 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Secret keys and environment variables
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Test and coverage files
+.pytest_cache/
+.coverage
+
+# Editor and operating system files
+.vscode/
+.DS_Store
